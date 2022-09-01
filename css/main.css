@@ -310,6 +310,34 @@ template {
   display: none;
 }
 
+/* barlow-regular - latin */
+@font-face {
+  font-family: "Barlow";
+  font-style: normal;
+  font-weight: 400;
+  src: local(""), url("../fonts/barlow-v12-latin-regular.woff2") format("woff2"), url("../fonts/barlow-v12-latin-regular.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* barlow-700 - latin */
+@font-face {
+  font-family: "Barlow";
+  font-style: normal;
+  font-weight: 700;
+  src: local(""), url("../fonts/barlow-v12-latin-700.woff2") format("woff2"), url("../fonts/barlow-v12-latin-700.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* fraunces-regular - latin */
+@font-face {
+  font-family: "Fraunces";
+  font-style: normal;
+  font-weight: 400;
+  src: local(""), url("../fonts/fraunces-v24-latin-regular.woff2") format("woff2"), url("../fonts/fraunces-v24-latin-regular.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* fraunces-900 - latin */
+@font-face {
+  font-family: "Fraunces";
+  font-style: normal;
+  font-weight: 900;
+  src: local(""), url("../fonts/fraunces-v24-latin-900.woff2") format("woff2"), url("../fonts/fraunces-v24-latin-900.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
 ul {
   list-style: none;
 }
@@ -326,6 +354,22 @@ body {
 img {
   max-width: 100%;
   vertical-align: middle;
+}
+
+body {
+  font-family: "Fraunces", "Arial", sans-serif;
+  font-weight: 900;
+  font-size: 28px;
+  line-height: 28px;
+}
+
+p {
+  font-family: "Barlow", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 25px;
+  /* or 167% */
 }
 
 .visually-hidden {
@@ -480,6 +524,8 @@ img {
   background-color: #0e8784;
   padding: 15px 30px;
   border-radius: 6px;
+  width: 217px;
+  height: 56px;
 }
 
 .link:hover {
@@ -488,4 +534,137 @@ img {
 
 .collection__list {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.collection__item-img {
+  max-width: 250px;
+  height: 190px;
+}
+
+.collection__item-title {
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 32px;
+  text-align: center;
+  color: #333d4b;
+  margin-top: 70px;
+}
+
+.collection__item-info {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  text-align: center;
+  color: #333d4b;
+  width: 255px;
+  height: 78px;
+}
+
+.collection__title {
+  width: 1111px;
+  height: 72px;
+  font-size: 150px;
+  line-height: 72px;
+  text-align: center;
+  color: #83888f;
+}
+
+.collection {
+  margin-top: 167px;
+}
+
+@media only screen and (max-width: 768px) {
+  .collection__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+  }
+  .collection__item-img {
+    max-width: 250px;
+    height: 190px;
+  }
+  .collection__item-title {
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 32px;
+    text-align: center;
+    color: #333d4b;
+    margin-top: 70px;
+  }
+  .collection__item-info {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 25px;
+    text-align: center;
+    color: #333d4b;
+    width: 255px;
+    height: 78px;
+  }
+  .collection__title {
+    width: 686px;
+    height: 72px;
+    font-size: 96px;
+    line-height: 72px;
+    text-align: center;
+    color: #83888f;
+    margin-bottom: 0;
+  }
+  .collection {
+    margin-top: 144px;
+  }
+  .collection__item-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+@media only screen and (max-width: 375px) {
+  .collection__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+  }
+  .collection__item-img {
+    max-width: 200px;
+    height: 151px;
+  }
+  .collection__item-title {
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 32px;
+    text-align: center;
+    color: #333d4b;
+    margin-top: 70px;
+  }
+  .collection__item-info {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 25px;
+    text-align: center;
+    color: #333d4b;
+    width: 255px;
+    height: 78px;
+  }
+  .collection__title {
+    width: 286px;
+    height: 72px;
+    font-size: 40px;
+    line-height: 72px;
+    text-align: center;
+    color: #83888f;
+    margin-bottom: 13px;
+    margin: 0 auto;
+  }
+  .collection {
+    margin-top: 120px;
+  }
+  .collection__item-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }/*# sourceMappingURL=main.css.map */
